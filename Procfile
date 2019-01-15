@@ -1,2 +1,2 @@
 web: python manage.py collectstatic
-web: gunicorn make_data.wsgi
+web: gunicorn web_ta.wsgi
