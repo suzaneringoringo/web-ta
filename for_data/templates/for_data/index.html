@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Hello, Partners!
+      </h1>
+      <p class="subtitle">
+        Let's store the <strong>links</strong> we know.
+      </p>
+    	<label class="label">From Verse</label>
+      <div class="field has-addons">	
+			  <p class="control">
+			    <span class="select">
+			      <select>
+			      	{% for book in books %}
+			        	<option>{{ book }}</option>
+			        {% endfor %}
+			      </select>
+			    </span>
+			  </p>
+			  <p class="control">
+			    <input class="input" type="text" placeholder="Chapter">
+			  </p>
+			  <p class="control">
+			    <input class="input" type="text" placeholder="Verse">
+			  </p>
+			</div>
+			<label class="label">To Verse</label>
+      <div class="field has-addons">	
+			  <p class="control">
+			    <span class="select">
+			      <select>
+			      	{% for book in books %}
+			        	<option>{{ book }}</option>
+			        {% endfor %}
+			      </select>
+			    </span>
+			  </p>
+			  <p class="control">
+			    <input class="input" type="text" placeholder="Chapter">
+			  </p>
+			  <p class="control">
+			    <input class="input" type="text" placeholder="Verse">
+			  </p>
+			</div>
+			<label class="label">Link Type</label>
+      <div class="field has-addons">	
+			  <p class="control">
+			    <span class="select">
+			      <select>
+			      	{% for linktype in linktypes %}
+			        	<option>{{ linktype }}</option>
+			        {% endfor %}
+			      </select>
+			    </span>
+			  </p>
+			</div>
+    </div>
+  </section>
+  </body>
+</html>
